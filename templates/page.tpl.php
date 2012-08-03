@@ -90,8 +90,12 @@
     <div id="menu-menu-container">
       <div id="main-menu">
         <?php 
-        $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu')); 
-        print drupal_render($main_menu_tree);
+          if (module_exists('i18n')) {
+            $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
+          } else {
+            $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+          }
+          print drupal_render($main_menu_tree);
         ?>
       </div>
     </div>
