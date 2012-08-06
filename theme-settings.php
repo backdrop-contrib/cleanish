@@ -77,7 +77,7 @@ function clean_theme_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['clean_settings']['slideshow']['slide3']['slide3_head'] = array(
     '#type' => 'textfield',
     '#title' => t('Slide Headline'),
-    '#default_value' => theme_get_setting('slide3_desc','clean_theme'),
+    '#default_value' => theme_get_setting('slide3_head','clean_theme'),
   );
   $form['clean_settings']['slideshow']['slide3']['slide3_desc'] = array(
     '#type' => 'textarea',
