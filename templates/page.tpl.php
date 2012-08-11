@@ -130,9 +130,9 @@
     <?php if ($is_front): ?>
     <?php if (theme_get_setting('slideshow_display','clean_theme')): ?>
       <?php 
-      $slide1_head = theme_get_setting('slide1_head','clean_theme'); $slide1_desc = theme_get_setting('slide1_desc','clean_theme'); 
-      $slide2_head = theme_get_setting('slide2_head','clean_theme'); $slide2_desc = theme_get_setting('slide2_desc','clean_theme'); 
-      $slide3_head = theme_get_setting('slide3_head','clean_theme'); $slide3_desc = theme_get_setting('slide3_desc','clean_theme'); 
+      $slide1_head = check_plain(theme_get_setting('slide1_head','clean_theme')); $slide1_desc = check_markup(theme_get_setting('slide1_desc','clean_theme')); 
+      $slide2_head = check_plain(theme_get_setting('slide2_head','clean_theme')); $slide2_desc = check_markup(theme_get_setting('slide2_desc','clean_theme')); 
+      $slide3_head = check_plain(theme_get_setting('slide3_head','clean_theme')); $slide3_desc = check_markup(theme_get_setting('slide3_desc','clean_theme')); 
       $slide1_cap = ($slide1_head) || ($slide1_desc);
       $slide2_cap = ($slide2_head) || ($slide2_desc);
       $slide3_cap = ($slide3_head) || ($slide3_desc);
@@ -144,21 +144,21 @@
            <img src="<?php print base_path() . drupal_get_path('theme', 'clean_theme') . '/images/slide-image-1.jpg'; ?>" height="350" width="660"/>
            <?php if ($slide1_cap): ?><div class="caption">
              <?php if ($slide1_head) { print '<h3>' . $slide1_head . '</h3>';  }?>
-             <?php if ($slide1_desc) { print '<p>' . $slide1_desc . '</p>';  }?>
+             <?php if ($slide1_desc) { print $slide1_desc;  }?>
            </div><?php endif; ?>
         </div>
         <div class="slide">
            <img src="<?php print base_path() . drupal_get_path('theme', 'clean_theme') . '/images/slide-image-2.jpg'; ?>" height="350" width="660"/>
            <?php if ($slide2_cap): ?><div class="caption">
              <?php if ($slide2_head) { print '<h3>' . $slide2_head . '</h3>';  }?>
-             <?php if ($slide2_desc) { print '<p>' . $slide2_desc . '</p>';  }?>
+             <?php if ($slide2_desc) { print $slide2_desc;  }?>
            </div><?php endif; ?>
         </div>
         <div class="slide">
            <img src="<?php print base_path() . drupal_get_path('theme', 'clean_theme') . '/images/slide-image-3.jpg'; ?>" height="350" width="660"/>
            <?php if ($slide3_cap): ?><div class="caption">
              <?php if ($slide3_head) { print '<h3>' . $slide3_head . '</h3>';  }?>
-             <?php if ($slide3_desc) { print '<p>' . $slide3_desc . '</p>';  }?>
+             <?php if ($slide3_desc) { print $slide3_desc;  }?>
            </div><?php endif; ?>
         </div>
       </div>
