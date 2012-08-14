@@ -130,9 +130,9 @@
     <?php if ($is_front): ?>
     <?php if (theme_get_setting('slideshow_display','clean_theme')): ?>
       <?php 
-      $slide1_head = check_plain(theme_get_setting('slide1_head','clean_theme')); $slide1_desc = check_markup(theme_get_setting('slide1_desc','clean_theme')); 
-      $slide2_head = check_plain(theme_get_setting('slide2_head','clean_theme')); $slide2_desc = check_markup(theme_get_setting('slide2_desc','clean_theme')); 
-      $slide3_head = check_plain(theme_get_setting('slide3_head','clean_theme')); $slide3_desc = check_markup(theme_get_setting('slide3_desc','clean_theme')); 
+      $slide1_head = check_plain(theme_get_setting('slide1_head','clean_theme')); $slide1_desc = check_markup(theme_get_setting('slide1_desc','clean_theme'), 'full_html'); 
+      $slide2_head = check_plain(theme_get_setting('slide2_head','clean_theme')); $slide2_desc = check_markup(theme_get_setting('slide2_desc','clean_theme'), 'full_html'); 
+      $slide3_head = check_plain(theme_get_setting('slide3_head','clean_theme')); $slide3_desc = check_markup(theme_get_setting('slide3_desc','clean_theme'), 'full_html'); 
       $slide1_cap = ($slide1_head) || ($slide1_desc);
       $slide2_cap = ($slide2_head) || ($slide2_desc);
       $slide3_cap = ($slide3_head) || ($slide3_desc);
