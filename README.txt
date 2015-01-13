@@ -4,11 +4,6 @@ Cleanish is a port of Clean theme by www.devsaran.com. Theme is a fixed width (9
 core theme. Its very light weight for fast loading with modern look.
   Simple and clean design
   Fixed width (980px)
-  Backdrop standards compliant
-  Implementation of a JS Slideshow
-  Multi-level drop-down menus
-  Footer with 4 regions
-  A total of 10 regions
 
 
 Backdrop compatibility:
@@ -19,7 +14,6 @@ Initially Developed by
 ============
 www.devsaran.com
 
-Help and Support Us
-=====================
-Please consider a small donation 
-Paypal ID : donation@devsaran.com
+Ported to Bacdrop by 
+====================
+https://github.com/docwilmot
