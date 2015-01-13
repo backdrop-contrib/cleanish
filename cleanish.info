@@ -1,0 +1,8 @@
+name = Cleanish Theme
+description = Cleanish Theme Backdrop theme.
+backdrop = 1.x
+
+stylesheets[all][] = style.css
+
+version = BACKDROP_VERSION
+

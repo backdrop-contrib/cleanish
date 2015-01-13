@@ -57,11 +57,11 @@
  * @see theme_comment()
  */
 ?>
-<div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<div class="<?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
 
   <div class="attribution">
 
-    <?php print $picture; ?>
+    <?php print $user_picture; ?>
 
     <div class="comment-submitted">
       <p class="commenter-name">
@@ -84,10 +84,10 @@
     <?php endif; ?>
 
     <?php print render($title_prefix); ?>
-    <h3<?php print $title_attributes; ?>><?php print $title; ?></h3>
+    <h3><?php print $title; ?></h3>
     <?php print render($title_suffix); ?>
 
-    <div class="content"<?php print $content_attributes; ?>>
+    <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
       <?php
         // We hide the comments and links now so that we can render them later.
         hide($content['links']);

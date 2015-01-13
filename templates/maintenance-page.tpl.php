@@ -1,59 +1,60 @@
 <?php
 /**
  * @file
- * Default theme implementation to display a single Drupal page while offline.
+ * Implementation to display a single Backdrop page while offline.
  *
- * All the available variables are mirrored in page.tpl.php. Some may be left
- * blank but they are provided for consistency.
+ * All the available variables are mirrored in page.tpl.php.
  *
  * @see template_preprocess()
  * @see template_preprocess_maintenance_page()
+ * @see bartik_process_maintenance_page()
  */
 ?>
 <!DOCTYPE html>
-<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
-
+<html<?php print backdrop_attributes($html_attributes); ?>>
 <head>
-  <?php print $head; ?>
+  <?php print backdrop_get_html_head(); ?>
   <title><?php print $head_title; ?></title>
-  <?php print $styles; ?>
-  <?php print $scripts; ?>
+  <?php print backdrop_get_css(); ?>
+  <?php print backdrop_get_js(); ?>
 </head>
-
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
-
-<div id="wrap" class="clearfix">
+<body class="<?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
 
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
-  
-  <header id="header" class="clearfix" role="banner">
-    <div id="header-top" class="clearfix">
-      <hgroup id="logo">
-        <?php if ($logo): ?>
-         <div id="logoimg">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-         </div>
-        <?php endif; ?>
-        <div id="sitename">
-          <h1><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1>
+
+  <div id="page-wrapper"><div id="page">
+
+    <header id="header" role="banner">
+      <?php if ($site_name || $site_slogan): ?>
+        <div id="name-and-slogan">
+          <?php if ($site_name): ?>
+            <div class="site-name">
+              <?php print $site_name; ?>
+            </div>
+          <?php endif; ?>
+          <?php if ($site_slogan): ?>
+            <div class="site-slogan">
+              <?php print $site_slogan; ?>
+            </div>
+          <?php endif; ?>
+        </div> <!-- /#name-and-slogan -->
+      <?php endif; ?>
+    </header>
+
+    <main id="content" class="column" role="main">
+      <a id="main-content"></a>
+      <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+      <?php print $content; ?>
+      <?php if ($messages): ?>
+        <div id="messages">
+          <?php print $messages; ?>
         </div>
-      </hgroup>
-	  </div>
-    <?php if($site_slogan) { print '<div id="site-slogan">' . $site_slogan . '</div>'; } ?>
-  </header>
+      <?php endif; ?>
+    </main>
 
-
-  <div id="main" class="clearfix">
-  <section id="post-content" role="main" class="clearfix">
-    <?php print $messages; ?>
-    <a id="main-content"></a>
-    <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-    <?php print $content; ?><br/><br/>
-  </section> <!-- /#main -->
-  </div>
-</div> <!-- /#wrapper -->
+  </div></div> <!-- /#page, /#page-wrapper -->
 
 </body>
 </html>

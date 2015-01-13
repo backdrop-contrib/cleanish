@@ -1,25 +1,21 @@
-About Clean Theme
+About Cleanish Theme
 ====================
-Clean Theme is a fixed width (980px) theme. The theme is not dependent on any 
+Cleanish is a port of Clean theme by www.devsaran.com. Theme is a fixed width (980px) theme. The theme is not dependent on any 
 core theme. Its very light weight for fast loading with modern look.
   Simple and clean design
   Fixed width (980px)
-  Drupal standards compliant
+  Backdrop standards compliant
   Implementation of a JS Slideshow
   Multi-level drop-down menus
   Footer with 4 regions
   A total of 10 regions
-  Compatible and tested on IE7, IE8, IE9+, Opera, Firefox, Chrome browsers
 
-Browser compatibility:
+
+Backdrop compatibility:
 =====================
-The theme has been tested on following browsers. IE7+, Firefox, Google Chrome, Opera.
+This theme is compatible with Backdrop 1.0 pre-release
 
-Drupal compatibility:
-=====================
-This theme is compatible with Drupal 7.x.x
-
-Developed by
+Initially Developed by
 ============
 www.devsaran.com
 
