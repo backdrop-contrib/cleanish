@@ -75,7 +75,7 @@
  */
 ?>
 <?php if (!$page): ?>
-  <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+  <article id="node-<?php print $node->nid; ?>" class="<?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
 <?php endif; ?>
     <?php if (!$page): ?>
       <header>
@@ -94,7 +94,7 @@
       </header>
   <?php endif; ?>
 <div class="forum-starter-picture"><?php print $user_picture; ?></div>
-  <div class="content"<?php print $content_attributes; ?>>
+  <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
     <?php
       // Hide comments, tags, and links now so that we can render them later.
       hide($content['comments']);
@@ -110,7 +110,19 @@
       <?php print render($content['links']); ?>
     </footer>
   <?php endif; ?>
-  <?php print render($content['comments']); ?>
+  <?php if ($page && !empty($comments)): ?>
+    <section class="comments">  
+      <?php if ($comments['comments']): ?>
+        <h2 class="title"><?php print t('Comments'); ?></h2>
+        <?php print render($comments['comments']); ?>
+      <?php endif; ?>
+
+      <?php if ($comments['comment_form']): ?>
+        <h2 class="title comment-form"><?php print t('Add new comment'); ?></h2>
+        <?php print render($comments['comment_form']); ?>
+      <?php endif; ?>
+    </section>
+  <?php endif; ?>
 <?php if (!$page): ?>
   </article> <!-- /.node -->
 <?php endif; ?>

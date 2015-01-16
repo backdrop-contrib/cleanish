@@ -818,12 +818,12 @@ margin:15px 0;
 }
 
 .links li a {
-  background-color: #E7E5E3;
+  background-color: #e7e5e3;
+  border-radius: 2px;
   color: #100100;
-  padding: 4px 5px;
-  border-radius: 4px;
-  text-shadow: 1px 1px #fff;
   font-weight: normal;
+  padding: 4px 10px;
+  text-shadow: 1px 1px #fff;
 }
 
 .links li a:hover {
@@ -1071,7 +1071,13 @@ ul.secondary a.active {
 
 .comment { margin-bottom: 20px; display: table; vertical-align: top; }
 
-.comment .attribution { display: table-cell; padding: 0 35px 0 0; vertical-align: top; overflow: hidden; }
+.comment .attribution {
+  display: table-cell;
+  overflow: hidden;
+  padding: 0 30px 0 0;
+  vertical-align: top;
+  width: 20%;
+}
 
 .comment .attribution img { margin: 0; border: 1px solid #d3d7d9; }
 
@@ -1085,10 +1091,8 @@ ul.secondary a.active {
 
 .comment .content { font-size: 0.929em; line-height: 1.6; }
 
-.comment .comment-arrow { background: url(images/comment-arrow.gif) no-repeat 0 center transparent;
-border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36px; margin-top: 15px; position: absolute; width: 20px; }
 
-.comment .comment-text { padding: 0 25px 10px 35px; display: table-cell; vertical-align: top; position: relative; width: 100%; border-left: 1px solid #d3d7d9; }
+.comment .comment-text { padding: 0 25px 10px 20px; display: table-cell; vertical-align: top; position: relative; width: 100%; border-left: 1px solid #d3d7d9; }
 
 .comment .indented { margin-left: 40px; }
 
@@ -1156,6 +1160,7 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
   background: #434343;
   text-shadow: none;
   color: #fff;
+  padding: 5px 10px;
 }
 
 #forum th a {
@@ -1172,6 +1177,9 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
   font-size: 16px;
 }
 
+#forum tr{ 
+  padding: 5px 10px;
+}
 
 /*-----------------------------------------------------------------------------------*
 /* Shortcodes
@@ -1205,4 +1213,18 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
   font-weight: normal;
   line-height: 1;
   margin-bottom: 1em;
+}
+
+/*-----------------------------------------------------------------------------------*
+/* Maintenance page
+/*-----------------------------------------------------------------------------------*/
+
+.maintenance-page #page-wrapper {
+  width: 100%;
+}
+.maintenance-page #page {
+  background-color: #fff;
+  margin: 35px auto;
+  padding: 1em;
+  width: 70%;
 }
