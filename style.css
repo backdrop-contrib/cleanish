@@ -46,9 +46,7 @@ blockquote, q {
   border: 1px solid #bbbbbb;
   background: #d8d8d8 url(images/quote.png) no-repeat;
   padding: 10px 5px 5px 47px;
-  text-shadow: 1px 1px #fff;
   margin: 5px 0;
-  border-radius: 7px;
 }
 
 blockquote:before, blockquote:after,
@@ -59,21 +57,22 @@ q:before, q:after {
 
 pre {
   background: #d8d8d8;
-  text-shadow: 1px 1px #fff;
   border: 1px solid #bbbbbb;
   padding: 7px;
   margin: 5px 0;
-  border-radius: 7px;
+}
+
+.messages pre {
+  background: none;
+  border: none;
 }
 
 code {
   background: #d8d8d8;
-  text-shadow: 1px 1px #fff;
   border: 1px solid #bbbbbb;
   display: block;
   padding: 7px;
   margin: 5px 0;
-  border-radius: 7px;
 }
 
 ins {
@@ -111,7 +110,6 @@ input, select {
 }
 
 select {
-  border-radius: 4px;
   border: 1px solid #ACACAC;
   padding: 3px 4px;
 }
@@ -214,7 +212,7 @@ h1 {
 }
 
 h2 {
-  font-size: 21px;
+  font-size: 32px;
 }
 
 h3 {
@@ -249,10 +247,6 @@ fieldset {
   padding: 0 0 10px; 
   position: relative; 
   top: 12px; /* Offsets the negative margin of legends */
-  -khtml-border-radius: 4px; 
-  -moz-border-radius: 4px; 
-  -webkit-border-radius: 4px; 
-  border-radius: 4px; 
 }
 
 .fieldset-wrapper { 
@@ -719,12 +713,6 @@ nav.header-menu {
 #footer{
   width: 920px;
   margin: 0 auto;
-  -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
   color: #7f7f7f;
 }
 #footer a{
@@ -807,23 +795,19 @@ margin:15px 0;
 }
 
 .submitted {
-  background: #dfdddd;
-  padding: 4px 9px;
-  border-radius: 4px;
-  color: #383838;
-  text-shadow: 1px 1px #fff;
   clear: both;
+  color: #aaa9a7;
   display: block;
-  margin-bottom: 2px;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
 }
 
 .links li a {
   background-color: #e7e5e3;
-  border-radius: 2px;
   color: #100100;
   font-weight: normal;
   padding: 4px 10px;
-  text-shadow: 1px 1px #fff;
 }
 
 .links li a:hover {
@@ -954,12 +938,11 @@ ul.primary li a {
   line-height: 1.5385em;
   margin: 0;
   padding: 0 1em;
-  border-radius: 4px 4px 0 0;
   margin-right: 5px;
 }
 
 ul.primary li a:hover, ul.primary li a.active {
-  background: #666;
+  background: #1F82CB;
   border: none;
   color: #fff;
 }
@@ -1009,18 +992,13 @@ ul.secondary a.active {
 
 .field-name-field-tags a{
   -moz-transition: background 0.3s ease-in-out 0s;
-  background: none repeat scroll 0 0 #999;
-  border-radius: 3px 3px 3px 3px;
-  color: #fff !important;
-  font-family: 'Helvetica Nue',Arial;
-  font-weight: bold;
+  color: #1F82CB !important;
   line-height: 1em;
   padding: 3px 4px;
   text-decoration: none;
 }
 
 .field-name-field-tags a:hover{
-  background: none repeat scroll 0 0 #1F82CB;
   text-decoration: none;
   text-shadow: none;
 }
@@ -1108,9 +1086,7 @@ ul.secondary a.active {
 
 .item-list .pager li {
   background: #cfcfcf;
-  border-radius: 3px;
   margin-right: 4px;
-  text-shadow: 1px 1px #fff;
 }
 
 /*-------------------------------------------*
