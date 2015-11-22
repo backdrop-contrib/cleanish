@@ -554,7 +554,7 @@ ul.nice-menu ul {
 
 .block-system-main-menu .content ul li{
   padding-right: 2px;
-  background-image: url("images/.block-system-main-menu-border.png");
+  background-image: url("images/nav-border.png");
   background-position: right top;
   background-repeat: no-repeat;
 }
