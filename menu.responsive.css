@@ -1,157 +1,12 @@
-body {
-  font-family: Trebuchet MS, Helvetica, sans-serif;
-  font-size: 12px;
-  line-height: 1.6em;
-  line-height: 160%;
-  background: #ddd;
-  color: #666;
-}
-
-p {
-  margin: 0px 0px 0.5em;
-  padding: 0px;
-}
-
-a {
-  text-decoration: none;
-  color: #086782;
-}
-
-h1 {
-  font-size: 32px;
-  line-height: 1.2em;
-}
-
-h2 {
-  font-size: 24px;
-  line-height: 1.2em;
-}
-
-h3 {
-  font-size: 19px;
-}
-
-h4 {
-  font-size: 16px;
-}
-
-.submitted {
-  text-transform: unset;
-}
-
-.field-type-text,
-.field-type-text-long {
-  margin: 0px 0px 0.5em;
-}
-
-/****************************/
-/* LOCAL CSS                */
-/****************************/
-
-a.logo {
-    float: left;
-    margin: 0px 16px 0px 0px;
-}
-
-.block-system-main-menu .content {
-    margin-bottom: 0;
-}
-
-/*
-.layout--two-column-flipped .l-container, .layout--two-column-flipped .l-footer {
-    border-radius: 8px;
-}
-.layout--two-column-flipped .l-sidebar .block {
-    margin: 10px 0px;
-    border-radius: 8px;
-}
-
-.layout {
-    height: auto;
-    min-height: 100vh;
-}
-.block-system-header .logo {
-    padding: 0px 15px 0px 10px;
-}
-.block-system-header .logo img {
-    margin-top: 6px;
-    width: 48px;
-}
-.block-system-header .name-and-slogan {
-    margin: 0px;
-    padding-top: 8px;
-}
-.block-system-header .site-slogan {
-    margin-top: 2px;
-}
-.l-top {
-    margin-top: 0px;
-}
-h1.title {
-    margin-top: 0px;
-}
-
-.l-container, .l-top, .l-messages, .l-header-inner, .l-featured, .l-triptych, .l-footer-columns {
-    max-width: 992px;
-}
-.layout--two-column .l-content {
-    margin-right: 20%;
-    width: 80%;
-}
-.layout--two-column .l-sidebar {
-    width: 20%;
-    margin-left: -20%;
-}
-.layout--two-column .l-content, .layout--two-column .l-sidebar {
-    padding: 0px 10px;
-}
-
-.l-sidebar tr td, .l-sidebar tr th {
-    padding: 4px 7px;
-}
-
 /*-------------------------------------------------*
 /* =  Navigation
 /*-------------------------------------------------*/
 .block-system-main-menu {
-/*width: 100%;*/
   float: right; /* left;*/
 }
 
-.dropmenu {
-  background: none repeat scroll 0 0 #444;
-  border-bottom: 4px solid #ddd;
-  float: left;
-  font-family: "Helvetica Neue",Arial;
-  margin-bottom: 25px;
-  width: 100%;
-  line-height: 59px;
-  height: 59px;
-}
-
-ul.nice-menu-down li.menuparent, ul.nice-menu-down li {
-  background-color: #444;
-  border: medium none;
-  margin-right: em;
-}
-
-ul.nice-menu a {
-  color: #fff;
-  display: block;
-  padding: 0 15px;
-}
-
-ul.nice-menu ul {
-  top: 3.8em;
-}
-
-.dropmenu ul li a.active {
-  background-color: #000;
-  border-bottom: 4px solid #1f82cb;
-  color: #fff;
-  height: 59px;
-  line-height: 59px;
-  margin-left: -1px;
+.block-system-main-menu .content {
+    margin-bottom: 0;
 }
 
 #main-menu {
@@ -161,7 +16,7 @@ ul.nice-menu ul {
   border-bottom: 4px solid #ddd;
   font-family: 'Helvetica Neue', Arial;
 }
-/*** ESSENTIAL Navigation Style ***/
+
 #main-menu ul,
 #main-menu ul * {
   margin: 0;
@@ -227,11 +82,7 @@ ul.nice-menu ul {
   background-position: right top;
   background-repeat: no-repeat;
 }
-/*
-#main-menu ul li:last-child{
-  background-image: none;
-}
-*/
+
 #main-menu ul a:focus,
 #main-menu ul a:hover,
 #main-menu ul a:active,
@@ -334,7 +185,6 @@ a.logo > img {
     background-repeat: unset;
 }
 
-/* Custom menu */
 #main-menu {
   margin: 0;
 }
@@ -374,13 +224,7 @@ div.block-system-main-menu {
   color: #C8CACB;
   font-weight: 500;
 }
-/*
-#main-menu li a.active{
-  color: #FFF;
-  border-top: 4px solid #FF4343;
-  padding-top: 20px;
-}
-*/
+
 #main-menu li li a.active{
   border-top: 1px solid #838383;
   padding: 8px 11px;
@@ -503,37 +347,6 @@ div.block-system-main-menu li.leaf {
 
 /* custom media */
 
-@media screen and (max-width: 1152px) {
-
-  #wrapper { max-width:960px; }
-
-  #top-area .column:last-child{  margin-right: 0; }
-  
-  #copyright{ padding: 0 10px; }
-}
-
-/*
-@media screen and (max-width: 960px) {
-  .content-sidebar-wrap,
-  #content, #sidebar-first,
-  #sidebar-second {
-    clear:both;
-    float:none;
-    width:100% !important;
-  }
-  #sidebar-first, #sidebar-second,
-  #head, #foot {
-    padding:0 3.52%;
-  }
-  #top-area .column{ width: 32%; }
-  #sidebar-first, #sidebar-second, #head, #foot{ padding: 0 1.5%; }
-  .region-front-welcome{ margin: 1% 2%; }
-  .block{ margin-bottom: 2%; }
-  .content-sidebar-wrap #content{ margin: 0; }
-  #footer_wrapper, #top-area { padding: 0 15px; }
-  #post-content{ margin: 10px; }
-}
-*/
 @media screen and (max-width: 640px) {
 
   .layout--two-column .l-content {
@@ -547,26 +360,6 @@ div.block-system-main-menu li.leaf {
   audio, canvas, progress, video {
       max-width: 100%;
   }
-
-  /* following are probably irrelevant for bartik, except menu */
-
-  .feature .fa { padding: 5px; height: 65px; }
-
-  #logo { text-align: center; width: 100%; }
-  #copyright{ padding: 10px 0;}
-  body { margin-top: 0; }
-  .top_left, .top_right, .search_block, .region-user-menu{ width: 100%; }
-  #logo a img{ display: inline-block; }
-  #footer p{ margin: 0; }
-  #copyright p{ margin: 10px 0; float: left; width: 100%; }
-  .front .content-sidebar-wrap{ margin: 0; }
-  .theme-default .nivo-controlNav{ padding-top: 10px; }
-  .region-front-welcome{ padding: 10px; }
-  #site-title { padding-top:18px; }
-  #site-description { padding-bottom:18px; }
-
-/* replaced #main-menu by .header-menu */
-/* .block-system-main-menu .block-content */
 
   .block-system-main-menu {
     width: 100%;
@@ -585,7 +378,6 @@ div.block-system-main-menu li.leaf {
   #main-menu{ border:0; }
   
   #main-menu a {
-/*  width:100%; */
     padding: 8px 11px;
     color: #fff;
     border-radius: 0;
@@ -607,9 +399,13 @@ div.block-system-main-menu li.leaf {
     display:none;
   }
   
-  .drop-down-toggle { display:block; }
+  .drop-down-toggle {
+    display:block;
+  }
 
-  .menu_wrapper{ margin: 0; }
+  .menu_wrapper{
+    margin: 0;
+  }
 
   #main-menu .nav-toggle {
     display: block;
@@ -628,66 +424,3 @@ div.block-system-main-menu li.leaf {
     width: 100%;
   }
 
-  /* following are probably irrelevant for bartik */
-
-  .content-sidebar-wrap,
-  #sidebar-first,
-  #sidebar-second {
-    float:none;
-    width:auto;
-  }
-  .content-sidebar-wrap #content {
-    float: left;
-    width:auto;
-  }
-  #sidebar-first .block,
-  #sidebar-second .block,
-  #footer-area .column,
-  #top-area .column {
-    float:none !important;
-    width:auto !important;
-    margin-left:0;
-  }
-  #sidebar-first {
-    clear:both;
-  }
-  #footer-area .column,
-  #top-area .column {
-    margin:10px;
-  }
-  #top-area .column:first-child,
-  #footer-area .column:first-child{
-    margin: 10px;
-  }
-  .copyright, .credits {
-    float: none;
-    text-align: left;
-    text-align: center;
-  }
-  #footer_wrapper, #top-area { padding: 0; }
-  .theme-default .nivo-caption{ display: none !important; }
-  #logo{ margin: 8px 0; text-align: center; }
-  #logo img{ text-align: center; }
-  #site-title{
-    display: inline-block;
-    padding: 0;
-    margin-top: 0;
-    width: 100%;
-  }
-  #site-description{
-    padding-bottom: 5px;
-    width: 100%;
-    text-align: center;
-  }
-  #site-title a{ width: 100%; text-align: center; }
-  .node { margin: 10px 0; }
-  .region-front-welcome .block h2{ padding: 5px 0; }
-  .nivo-directionNav{ display: none !important; }
-  .region-front-welcome, .region-highlights p{ font-size: 13px; }
-  .region-highlights h1 { font-size: 18px; }
-  /*Color Scheme*/
-  .blue #main-menu li a.active,
-  .green #main-menu li a.active,
-  .pink #main-menu li a.active,
-  .black #main-menu li a.active { border-color: #1E262D; }
-}
