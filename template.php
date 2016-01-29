@@ -30,3 +30,40 @@ function cleanish_preprocess_node(&$variables) {
     $variables['classes_array'][] = 'node-full';
   }
 }
+
+/**
+ * Preprocess menu_link to identify top level of main-menu
+ * Note : preprocess_menu_link is FIFO, while theme_menu_tree is LIFO
+ */
+function cleanish_preprocess_menu_link(&$variables) {
+  static $count = 0;
+  if ($variables['theme_hook_original'] == 'menu_link__main_menu') {
+    if ($count++ == 0) {
+      $variables['element']['#attributes']['class'][] = 'top-level-main-menu';
+    }
+  }
+}
+
+/**
+ * Theme main-menu to make it responsive easy
+ */
+function cleanish_menu_tree__main_menu(&$variables) {
+//return '<ul class="menu clearfix">' . $variables['tree'] . '</ul>';
+  return (strpos($variables['tree'], 'top-level-main-menu') !== FALSE) ?
+'<nav id="main-menu" class="responsive-menu" role="navigation">
+<a class="nav-toggle" href="#">Navigation</a>
+<div class="menu-navigation-container">
+<ul class="menu top-level-main-menu clearfix">
+' . $variables['tree'] . '
+</ul>
+</div>
+<div class="clear"></div>
+</nav><!-- end main-menu -->
+'
+ : '
+<ul class="menu clearfix">
+' . $variables['tree'] . '
+</ul>
+';
+}
+
