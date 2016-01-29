@@ -1,0 +1,426 @@
+/*-------------------------------------------------*
+/* =  Navigation
+/*-------------------------------------------------*/
+.block-system-main-menu {
+  float: right; /* left;*/
+}
+
+.block-system-main-menu .content {
+    margin-bottom: 0;
+}
+
+#main-menu {
+  background: #444;
+  height: 55px;
+  margin-bottom: 25px;
+  border-bottom: 4px solid #ddd;
+  font-family: 'Helvetica Neue', Arial;
+}
+
+#main-menu ul,
+#main-menu ul * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#main-menu ul { line-height: 1.0 }
+#main-menu ul ul {
+  position: absolute;
+  top: -999em;
+  width: 160px; /* left offset of submenus need to match (see below) */
+}
+#main-menu ul ul li { width: 100% }
+#main-menu ul li:hover {
+  visibility: inherit; /* fixes IE7 'sticky bug' */
+}
+#main-menu ul li {
+  float: left;
+  position: relative;
+}
+#main-menu ul a {
+  display: block;
+  position: relative;
+}
+#main-menu ul li:hover ul,
+#main-menu ul li.sfHover ul {
+  left: 0;
+  top: 55px; /* match top ul list item height */
+  z-index: 99;
+}
+#main-menu ul ul li:hover li ul.links,
+#main-menu ul ul li.sfHover li ul.links { top: -999em }
+#main-menu ul ul li:hover ul.links,
+#main-menu ul ul li.sfHover ul.links {
+  left: 160px; 
+  top: 0;
+}
+/* .block-system-main-menuigation skin ***/
+#main-menu ul {
+  float: left;
+  margin-bottom: 1em;
+}
+#main-menu ul li a {
+  height: 55px;
+  line-height: 55px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ddd;
+  padding: 0 20px;
+  text-decoration: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: none;
+  border-radius: 0;
+  padding: 4px 15px;
+}
+
+
+#main-menu ul li{
+  padding-right: 2px;
+  background-image: url("images/nav-border.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+#main-menu ul a:focus,
+#main-menu ul a:hover,
+#main-menu ul a:active,
+#main-menu ul li.sfHover > a {
+  color: #fff;
+  background-color: #000;
+}
+
+#main-menu ul li a.active {
+  color: #fff;
+  background-color: #000;
+  border-bottom: 4px solid #1f82cb;
+  height: 59px;
+  line-height: 59px;
+  margin-left: -1px;
+}
+#main-menu ul li a.active-trail {
+  color: #fff;
+  background-color: #000;
+  border-bottom: 4px solid #1f82cb;
+  height: 59px;
+  line-height: 59px;
+  margin-left: -1px;
+}
+#main-menu ul ul li a.active {
+  color: #fff;
+  background-color: #000;
+  border-bottom: none;
+  height: auto;
+  line-height:1em;
+  margin-left:none;
+}
+#main-menu ul ul li a.active-trail {
+  color: #fff;
+  background-color: #000;
+  border-bottom: none;
+  height: auto;
+  line-height:1em;
+  margin-left:none;
+}
+#main-menu ul ul ul li a.active {
+  color: #fff;
+  background-color: #000;
+  border-bottom: none;
+  height: auto;
+  line-height:1em;
+  margin-left:none;
+}
+/*Subs*/
+#main-menu ul ul{
+  background: #444;
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,.4);
+  box-shadow:  0 0 3px rgba(0,0,0,.4);
+}
+#main-menu ul ul a{
+  margin: 0px;
+  font-size: 12px;
+  padding: 15px 20px;
+  line-height: 1em;
+  height: auto;
+  font-weight: normal;
+  background-image: none;
+  z-index: 200;
+}
+#main-menu ul ul li{
+  border: none;
+  background-image: none;
+}
+#main-menu ul ul a:focus,
+#main-menu ul ul a:hover,
+#main-menu ul ul a:active {
+  color: #fff;
+}
+#main-menu ul ul .current-menu-item a{
+  color: #fff;
+  border: none !important;
+}
+#main-menu ul ul li:last-child{
+  border-bottom: 0px;
+}
+
+nav.header-menu {
+  float: right;
+}
+
+#header .header-menu li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5em;
+}
+/***********************/
+/* Custom menu         */
+/***********************/
+a.logo > img {
+    width: 56px;
+}
+#main-menu ul li {
+    background-repeat: unset;
+}
+
+#main-menu {
+  margin: 0;
+}
+
+div.block-system-main-menu {
+/*  background: #485053 none repeat scroll 0% 0%; */
+    background-color: #4A4A4A;
+    background-image: -moz-linear-gradient(center top , #4A4A4A 0%, #4E4E4E 100%);
+    color: #000; /* #C8CACB; */
+}
+
+div.block-system-main-menu {
+  position: relative;
+}
+
+#main-menu ul {
+/*float:right;*/
+  padding:0;
+  margin:0;
+  list-style:none;
+  font-size:13px;
+}
+
+#main-menu li {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  font-size: 15px;
+  float: left;
+}
+
+#main-menu a {
+  padding: 24px 20px;
+  display: block;
+  text-decoration: none;
+  color: #C8CACB;
+  font-weight: 500;
+}
+
+#main-menu li li a.active{
+  border-top: 1px solid #838383;
+  padding: 8px 11px;
+}
+
+#main-menu li:hover >a{
+  color: #fff;
+}
+
+#main-menu ul li:first-child {
+  padding-left:0;
+}
+
+ul.menu{
+  padding: 0;
+  margin: 5px 0 5px 0;
+}
+
+#main-menu li li:hover > a{
+  background: #3F5364;
+}
+
+.drop-down-toggle {
+  position: absolute;
+  top: 7px;
+  right: 16px;
+  display: none;
+  width: 20px;
+  height: 20px;
+  -khtml-border-radius: 15px; 
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+   border-radius: 15px;
+  background: rgb(73, 71, 71);
+  border: rgb(170, 170, 170) 2px solid;
+}
+
+.drop-down-arrow {
+  display:block;
+  width:0;
+  height:0;
+  margin:6px 0 0 3px;
+  border-top:5px solid #aaa;
+  border-left:transparent 5px solid;
+  border-right:transparent 5px solid;
+}
+
+#main-menu li li {
+  float:none;
+  min-width:150px;
+  padding:0;
+  margin:0;
+  position: relative;
+}
+
+#main-menu li ul ul{
+  left: 151px;
+  top: 0;
+}
+
+#main-menu li li a {
+  background: #5E5E5E;
+  min-width: 150px;
+  margin: 0;
+  border-top: 1px solid #838383;
+  font-size: 13px;
+  text-align: left;
+  overflow: hidden;
+  padding: 8px 11px;
+  -khtml-border-radius: 0; 
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+   border-radius: 0;
+  color: white;
+  border-width: 1px 0 0 0;
+}
+
+#main-menu li ul {
+  display:none;
+  position:absolute;
+  z-index:9999;
+  padding:0;
+  margin:0;
+  background: #2E3D4A;
+  overflow: visible !important;
+}
+
+#main-menu li:hover > ul,
+#main-menu li li:hover > ul,
+#main-menu li li li:hover > ul {
+  display:block;
+}
+
+#main-menu .nav-toggle {
+  display:none;
+}
+
+div.block-system-main-menu ul li.leaf, 
+div.block-system-main-menu ul li.expanded, 
+div.block-system-main-menu ul li.collapsed {
+  list-style:none;
+}
+
+div.block-system-main-menu ul.menu li li{
+  border: 0;
+  margin: 0;
+}
+
+div.block-system-main-menu ul.menu li li:hover >a{
+  background: #FF4343;
+}
+
+div.block-system-main-menu li.expanded, 
+div.block-system-main-menu li.collapsed, 
+div.block-system-main-menu li.leaf {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* custom media */
+
+@media screen and (max-width: 640px) {
+
+  .layout--two-column .l-content {
+      width: 100%;
+      margin-right: 0%;
+  }
+  .layout--two-column .l-sidebar {
+      margin-left: 0;
+      width: 100%;
+  }
+  audio, canvas, progress, video {
+      max-width: 100%;
+  }
+
+  .block-system-main-menu {
+    width: 100%;
+    float: left;
+  }
+
+  #main-menu ul { display:none; }
+  
+  #main-menu li ul { position:static; border: 0; }
+  
+  #main-menu li ul ul { margin:0 !important; border: 0; }
+  
+  #main-menu ul,
+  #main-menu li { float:none; max-width:100%; }
+
+  #main-menu{ border:0; }
+  
+  #main-menu a {
+    padding: 8px 11px;
+    color: #fff;
+    border-radius: 0;
+    text-align: center;
+    border-bottom: 1px solid #1e262d;
+  }
+
+  #main-menu ul li a.active {
+    background-color: transparent;
+    padding: 4px 15px;
+  }
+  #main-menu li a.active, .black #main-menu li a.active{ padding: 10px 0; border-top: 0; }
+
+  #main-menu li li a { text-align:center; font-size: 15px; }
+  
+  #main-menu li:hover > ul,
+  #main-menu li li:hover > ul,
+  #main-menu li li li:hover > ul {
+    display:none;
+  }
+  
+  .drop-down-toggle {
+    display:block;
+  }
+
+  .menu_wrapper{
+    margin: 0;
+  }
+
+  #main-menu .nav-toggle {
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+    margin: 0;
+    padding: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+    background: url(images/mob-menu.png) right no-repeat #1D1D1D;
+  }
+
+  #main-menu ul.menu li{
+    margin: 0;
+    width: 100%;
+  }
+

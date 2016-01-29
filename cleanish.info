@@ -3,6 +3,7 @@ description = Cleanish Theme Backdrop theme.
 backdrop = 1.x
 type = theme
 stylesheets[all][] = style.css
+stylesheets[screen][] = menu.responsive.css
+scripts[] = menu.responsive.js
 
 version = 1.x-1.0.0
-
